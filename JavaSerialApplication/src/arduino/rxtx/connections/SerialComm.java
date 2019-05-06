@@ -26,7 +26,7 @@ public class SerialComm extends JFrame implements SerialPortEventListener{
 	public static BufferedReader input = null;
 	public static OutputStream output = null;
 	private static SerialPort serialPort;
-	private static final int DATA_RATE = 19200; // bits per seconds for COM4 : how many bits to transfer so serial port per seconds
+	private static final int DATA_RATE = 19200; // bits per seconds for COM4 : how many bits to transfer per seconds in serial communication
 	public String portName = "";
 	public String inputLine;
 	
@@ -36,11 +36,10 @@ public class SerialComm extends JFrame implements SerialPortEventListener{
 
 		// search port available
 		@SuppressWarnings("rawtypes")
-		Enumeration port = CommPortIdentifier.getPortIdentifiers(); // get the ports
+		Enumeration port = CommPortIdentifier.getPortIdentifiers(); // get the serial ports
 
 		while(port.hasMoreElements()) { // iterate the ports
 			commPort = (CommPortIdentifier)port.nextElement();
-//			System.out.println("Ports:" + commPort.getName().toString());
 		}
 
 		try {
@@ -101,6 +100,5 @@ public class SerialComm extends JFrame implements SerialPortEventListener{
 		serialPort.addEventListener(this);
 		serialPort.notifyOnDataAvailable(true);
 		
-//		return inputLine;
 	}
 }
