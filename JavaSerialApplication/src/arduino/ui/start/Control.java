@@ -227,8 +227,6 @@ public class Control extends JFrame implements ActionListener, SerialPortEventLi
 				String data1 = "";
 				for(int i = 0; i < 5; i++) {
 
-//					sleep(4000);
-
 					data1 = values.get(i);
 					System.out.println(values.get(i));
 					prepared.setString(1, data1); // inserting data to database
