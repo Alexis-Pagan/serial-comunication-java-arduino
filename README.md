@@ -7,4 +7,6 @@ This project is based on serial communication between Arduino and Java UX applic
 
 The project was developed for the Microcontroller Lecture. 
 
+```
 NOTE: to run the program please use: Eclipse or Spring STS IDE. Java JDK 8 is preffered. 
+```
